@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectSammy</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+    
+    <section id="/home">
+    </section>
+
+    <section id="/experience"> 
+    </section>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-links a');
+    
+        navLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetSection = document.querySelector(link.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+    </script>
+    
+</head>
+<body> 
+    
+    <header>
+        <div class="header-content">
+            <h1>hello senpai, <span class="name">sammy</span> here<span class="blinking-letter">.</span></h1>
+
+            <a href="mailto:hellosenpai@justsammy.com" class="button">
+                <img src="pngwing.com.png" alt="Email Icon" class="email-icon">
+                Say hi!
+            </a>
+        </div>
+    </header>
+    
+    <div class="intro-container">
+        <h2 class="intro-heading"><span class="blinking-letter">I</span> create stuff sometimes.</h2>
+        <p class="intro-paragraph">
+            Your local <span style="color: #64ffda;">nerd</span>, <span style="color: #64ffda;">gamer</span>, and <span style="color: #64ffda;">artist</span> based in <span style="color: #64ffda;">Hawaii</span>. 
+            I have great <span style="color: #64ffda;">interest</span> in <span style="color: #ffffff;"> video games</span>,<span style="color: #ffffff;"> anime/manga</span>, <span style="color: #ffffff;"> art</span>,<span style="color: #ffffff;"> kpop</span>,
+            <span style="color: #64ffda;">tech field</span>, web design/development, machine learning, and <span style="color: #64ffda;">everything</span>
+            in between.
+        </p>
+    </div>
+
+    <div class="navbar-container">
+        <nav>
+            <div class="nav-links">
+                <a href="#/home">/home</a>
+                <a href="#/about">/about</a>
+                <a href="#/projects">/projects</a>
+                <a href="#/experience">/experience</a>
+            </div>
+        </nav>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sam-dameg-432410282/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+             <a href="https://beacons.ai/justsammy/" target="_blank">
+                <i class="fa-solid fa-b"></i>
+            </a>
+            <a href="https://github.com/SammyCode002" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+             
+             <a href="https://www.facebook.com/SammyJustGaming/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="message-board">
+        <h3>Message of the Day</h3>
+        <ul id="message-list">
+            <li>"Every journey begins with a single step.<br> We just have to have patience."<br>
+                 - Milly Thompson</li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="/about">
+            <div class="about-heading">
+                <h1>/About<span class="blinking-letter"> Me </span></h1>
+                <hr>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <section id="/about"> 
+                    <p>
+                    
+                          Hi there! I'm an <span style="color: #64ffda;"> avid </span> self-learner, <span style="color: #64ffda;">artist</span> and <span style="color: #64ffda;">gamer</span>, currently <span style="color: #64ffda;"> working </span> for <span style="color: #64ffda;">Meta</span> and a <span style="color: #64ffda;">YouTube Partner</span> on the side. I'm <span style="color: #64ffda;"> Majoring </span> in <span style="color: #64ffda;"> Electronics </span> & <span style="color: #64ffda;"> Computer Engineering Technology </span>, and I'm also taking courses in front-end
+                            development from <span style="color: #64ffda;"> META </span>,<span style="color: #64ffda;"> IBM </span> cybersecurity, and other <span style="color: #64ffda;">tech</span>-related fields classes and
+                            self-learning. Outside of work, I enjoy playing <span style="color: #64ffda;">video games</span>, creating <span style="color: #64ffda;">art</span>, and
+                            I'm a big fan of <span style="color: #64ffda;">anime</span> and <span style="color: #64ffda;">manga</span>. I also prioritize <span style="color: #64ffda;">fitness</span> and <span style="color: #64ffda;">family</span> in my free time.  
+                    </p>
+                </section> 
+                </div>
+                
+                <div>
+                <img src="aboutmepic.jpg" alt="Sammy's Picture" class="about-img">
+            </div>
+            <div class="about-lists">
+                <ul class="about-list tech-list">
+                    <p>
+                        Here are some <span style="color: #64ffda;">technologies</span> I have been working with:
+                    </p>
+                    <li>Javascript</li>
+                    <li>Node.js</li>
+                    <li>React.js</li>
+                    <li>HTML &amp; CSS</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                </ul>
+                <ul class="about-list certifications-list">
+                    <p>
+                        Here are some <span style="color: #64ffda;">certifications</span> I have achieved:
+                    </p>
+                    <li>Google Cybersecurity Specialization</li>
+                    <li>IBM:Cybersecurity Tools & Cyber Attacks</li>
+                    <li>IBM:Cybersecurity Roles, Processes & Operating System Security</li>
+                    <li>Google Cloud Fundamentals: Core Infrastructure</li>
+                    <li>Essential Google Cloud Infrastructure: Foundation</li>
+                    <li>Google Cloud:Introduction to Generative AI</li>
+                    <li>Meta:Android Mobile Application Development </li>
+                </ul>
+            </div>
+        </section>
+    
+        <section id="/projects">
+            <div class="projects-heading">
+                <h1><span class="blinking-letter">/</span>Projects</h1>
+                <hr>
+            </div>
+            <div class="projects-content">
+                <div class="project-card">
+                    <img src="underconstruction.png" alt="Project 1">
+                    <h2>Project 1</h2>
+                    <p>nothing</p>
+                </div>
+                <div class="project-card">
+                    <img src="underconstruction.png" alt="Project 2">
+                    <h2>Project 2</h2>
+                    <p>here</p>
+                </div>
+                <div class="project-card">
+                    <img src="underconstruction.png" alt="Project 3">
+                    <h2>Project 3</h2>
+                    <p>yet</p>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <div class="section-header">
+                <span class="section-title">/experience</span>
+            </div>
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; Built and designed by Sammy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'NTR', sans-serif;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.name {
+    color: #64ffda; 
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.intro-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #e6f1ff;
+}
+
+.intro-paragraph {
+    font-size: 20px;
+    text-align: center;
+    color: #a8b2d1;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0a192f;
+    margin-top: 20px; 
+}
+
+/* Button Styles */
+.button {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center; 
+    padding: 10px 20px;
+    background-color: #64ffda;
+    color: #0a192f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.email-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #8892b0;
+    color: #e6f1ff;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #0a192f; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; 
+}
+
+.nav-links {
+    display: flex; 
+}
+
+nav a {
+    color: #ccd6f6; 
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+nav a:last-child {
+    margin-right: 0; 
+}
+
+nav a:hover {
+    color: #64ffda; 
+}
+
+/* Social Links Styles */
+.social-links {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex; 
+    align-items: center;
+}
+
+.social-links a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    color: #64ffda;
+}
+
+#message-board {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #0a192f;
+  color: #FFFFFF; 
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#message-board h3 {
+  color: #64ffda;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#message-list li {
+  color: #FFFFFF; 
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    background-color: #0a192f;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #e6f1ff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #233554;
+    color: #ccd6f6;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-family: 'NTR', sans-serif;
+    font-size: 14px;
+    color: #a8b2d1;
+}
+
+/* About Me Section Styles */
+#about-me {
+    background-color: #233554;
+    color: #ccd6f6;
+    padding: 40px;
+}
+
+.about-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-heading h2 {
+    font-size: 28px;
+    margin-right: 10px;
+    color: #64ffda;
+}
+
+.about-heading hr {
+    flex: 1;
+    border: none;
+    border-top: 2px solid #64ffda;
+    margin: 0 10px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+.about-content img {
+    width: 280px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.about-lists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 40px; 
+}
+
+.about-list {
+    max-width: 300px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.tech-list li::marker {
+    color: #64ffda;
+}
+
+.certifications-list {
+  margin-top: 20px; 
+}
+
+.certifications-list p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.certifications-list li {
+  color: #ccd6f6;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Projects Section Styles */
+#projects {
+    background-color: #233554; 
+    color: #ccd6f6; 
+    padding: 40px;
+}
+
+.projects-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.projects-heading h1 {
+    font-size: 28px; 
+    margin-right: 10px;
+    color: #a8b2d1; 
+}
+
+.projects-heading hr {
+    flex: 1;
+    border: none;
+    border-top: 2px solid #64ffda;
+    margin: 0 10px;
+}
+
+.projects-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-gap: 20px;
+}
+
+.project-card {
+    background-color: #0a192f; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 40%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ccd6f6; 
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #a8b2d1; 
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+    
+    header {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    
+    #about-me {
+        padding: 60px;
+    }
+
+    .about-heading h1 {
+        font-size: 36px;
+    }
+
+    .about-content {
+        flex-direction: row;
+    }
+
+    .about-text {
+        margin-right: 40px;
+    }
+
+    .about-img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+    
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+   
+    #about-me {
+        padding: 30px;
+    }
+
+    .about-heading h1 {
+        font-size: 24px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Styles for mobile devices */
+}
+
+/* Other non-responsive styles */
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking-letter {
+    animation: blink 1s infinite;
+}
