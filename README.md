@@ -1,3 +1,4 @@
 # justsammy.com
 Currently working on my website #ProjectSammy
-![justsammy com](https://github.com/SammyCode002/justsammy.com/assets/139438647/851082b3-b0da-43fa-8a38-2290f070d94f)
+Added game and updated bio!
+![justsammydotcom](https://github.com/SammyCode002/justsammy.com/assets/139438647/7bbdd634-3c8b-4bf0-974b-75108665aa96)
