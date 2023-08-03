@@ -232,7 +232,8 @@ footer p {
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center; /* Added to center the content vertically */
+    align-items: center;
+    justify-content: center;
 }
 
 .about-text {
@@ -251,16 +252,16 @@ footer p {
     width: 280px;
     height: 300px;
     border-radius: 15px;
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 0 auto;
 }
 
 .about-lists {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the lists horizontally */
+    align-items: flex-start;
     flex: 1;
-    margin-top: 20px;
-    max-width: 300px; /* Set max-width to limit the width of the lists */
+    max-width: 300px;
+    margin-left: 40px; /* Adjust the left margin to move the list to the right */
 }
 
 .about-list {
@@ -271,6 +272,9 @@ footer p {
 .tech-list li::marker {
     color: #64ffda;
 }
+
+
+
 
 #certifications {
     background-color: #233554;
@@ -306,7 +310,7 @@ footer p {
 
 .certifications-list {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .certifications-list h3 {
@@ -319,7 +323,19 @@ footer p {
 }
 
 
+/* Blinking Cursor Animation */
+.blinking-letter {
+    animation: blink 1s infinite;
+}
 
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
