@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectSammy</title>
-    <link rel="stylesheet" href="app.css?v=3">
-    <script src="script.js?v=2"></script>
+    <link rel="stylesheet" href="app.css?v=9">
+    <script src="script.js?v=9"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-   
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="fractaltree.js"></script>
 </head>
 <body> 
     
@@ -41,9 +40,9 @@
     <div class="intro-container">
         <h2 class="intro-heading">"<span class="blinking-letter">Hello</span>, World!"</h2>
         <p class="intro-paragraph">
-            Your local <span style="color: #64ffda;">nerd</span>, <span style="color: #64ffda;">gamer</span>, and <span style="color: #64ffda;">artist</span> based in <span style="color: #64ffda;">Hawaii</span>. 
-            I have great <span style="color: #64ffda;">interest</span> in <span style="color: #ffffff;"> video games</span>,<span style="color: #ffffff;"> anime</span>, <span style="color: #ffffff;"> art</span>,
-            <span style="color: #64ffda;">tech field</span>- web development, cybersecurity, machine learning, and <span style="color: #64ffda;">everything</span>
+            Your local <span style="color: #e667ff;">nerd</span>, <span style="color: #e667ff;">gamer</span>, and <span style="color: #e667ff;">artist</span> based in <span style="color: #e667ff;">Hawaii</span>. 
+            I have great <span style="color: #e667ff;">interest</span> in <span style="color: #ffffff;"> video games</span>,<span style="color: #ffffff;"> anime</span>, <span style="color: #ffffff;"> art</span>,
+            <span style="color: #e667ff;">tech field</span>- <span style="color: #ffffff;">data science, cybersecurity, machine learning,</span> and <span style="color: #e667ff;">everything</span>
             in between.
         </p>
     </div>
@@ -58,8 +57,10 @@
             <a href="https://github.com/SammyCode002" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-             
-             <a href="https://www.facebook.com/SammyJustGaming/" target="_blank">
+             <a href="https://www.instagram.com/justsammy_21/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+             <a href="https://www.facebook.com/JustSammy21/" target="_blank">
                 <i class="fab fa-facebook"></i>
             </a>
         </div>
@@ -68,12 +69,14 @@
     <div class="message-board">
         <h3>Message of the Day</h3>
         <ul id="message-list">
-            <li>“Success is not final, failure is not fatal: <br> It is the courage to continue that counts.”<br> - Winston Churchill
+            <li>“Great things are done by a series of small things brought together.”<br> - Vincent van Gogh
                  </li>
         </ul>
     </div>
-
+    
     <main>
+
+
         <section id="about">
             <div class="about-heading">
                 <h1>/About<span class="blinking-letter"> Me </span></h1>
@@ -83,10 +86,8 @@
                 <div class="about-text">
                     <p>
                     
-                          Hi there! I'm an <span style="color: #64ffda;"> avid </span> self-learner, <span style="color: #64ffda;">artist</span>, <span style="color: #64ffda;">gamer</span> and a<span style="color: #64ffda;"> techie</span>. I'm <span style="color: #64ffda;"> Majoring </span> in <span style="color: #64ffda;"> Electronics </span> & <span style="color: #64ffda;"> Computer Engineering Technology </span>, and I'm also taking courses in front-end
-                            development from <span style="color: #64ffda;"> META </span>,<span style="color: #64ffda;"> IBM </span> cybersecurity, and other <span style="color: #64ffda;">tech</span>-related fields classes and
-                            self-learning. Outside of work, I enjoy playing <span style="color: #64ffda;">video games</span>, creating <span style="color: #64ffda;">art</span>, and
-                            I'm a big fan of <span style="color: #64ffda;">anime</span> and <span style="color: #64ffda;">manga</span>. I also prioritize <span style="color: #64ffda;">self-care, fitness</span> and <span style="color: #64ffda;">family</span> in my free time. Currently <span style="color: #64ffda;">studying</span> for the <span style="color: #64ffda;">CompTIA Security+ & CCSK Exam</span>.
+                          Hi there! I'm an <span style="color: #e667ff;"> avid </span> self-learner, <span style="color: #e667ff;">artist</span>, <span style="color: #e667ff;">gamer</span> and a<span style="color: #e667ff;"> techie</span>.  My <span style="color: #e667ff;">career interest</span> lies in <span style="color: #e667ff;">computer science and information technology</span>. Currently, I'm attending the<span style="color: #e667ff;"> University of Hawaii Maui</span>, majoring in <span style="color: #e667ff;">Natural Science</span> with a focus on<span style="color: #e667ff;"> Information & Communications Technology</span>. In addition to my academic pursuits, I'm currently interning with<span style="color: #e667ff;"> Oceanit</span>, working on the <span style="color: #e667ff;">Climate Change Toolkit at Paia Mantokuji</span>. This exciting opportunity involves engaging in <span style="color: #e667ff;">topography and bathymetry</span>. In my free time, I'm taking online <span style="color: #e667ff;">cybersecurity</span> courses, completing programs from<span style="color: #e667ff;"> Google, Cisco, (ISC)²,</span> and more. Beyond that, I've been self-learning program languages like <span style="color: #e667ff;">java, python, js</span> & topics like <span style="color: #e667ff;">machine learning, cloud computing,</span> and more on platforms like COURSERA, UDEMY and KAGGLE. Outside of school & work, I enjoy playing <span style="color: #e667ff;">video games</span>, creating <span style="color: #e667ff;">art</span>, and
+                            I'm a big fan of <span style="color: #e667ff;">anime</span> and <span style="color: #e667ff;">manga</span>. I also prioritize <span style="color: #e667ff;">self-care, fitness</span> and <span style="color: #e667ff;">family</span>. 
                     </p>
                 </div>
             
@@ -97,7 +98,7 @@
             <div class="about-lists">
                 <ul class="about-list tech-list">
                     <p>
-                        Here are some <span style="color: #64ffda;">technologies</span> I have been working with:
+                        Here are some <span style="color: #e667ff;">technologies</span> I have been learning and working with:
                     </p>
                     <li>Javascript</li>
                     <li>Node.js</li>
@@ -108,6 +109,7 @@
                     <li>Wireshark</li>
                     <li>Splunk</li>
                     <li>VM Virtual Box</li>
+                    <li>Matlab</li>
                 </ul>
                 
             </div>
@@ -121,27 +123,41 @@
     <div class="certifications-content">
         <div class="certifications-lists-left">
             <h3>
-                Here are some of my <span style="color: #64ffda;">cybersecurity certifications</span>:
+                Here are some of my <span style="color: #e667ff;">cybersecurity certificates</span>:
             </h3>
             <ul class="certifications-list tech-list">
                 <li>Google Cybersecurity Specialization</li>
                 <li>(ISC)² Certified in Cybersecurity Specialization</li>
-                <li>Cisco Network Security</li>
+                <li>Python for Cybersecurity Specialization</li>
+                <li>Cisco Cybersecurity Operations Fundamentals Specialization</li>
                 <li>IBM:Cybersecurity Tools & Cyber Attacks</li>
                 <li>IBM:Cybersecurity Roles, Processes & Operating System Security</li>
                 <li>Wireshark Essential Training</li>
                 <li>Wireshark Functionality</li>
                 <li>Splunk for Security Analytics and Monitoring</li>
             </ul>
+            
+             <h3>
+                Here are some of my <span style="color: #e667ff;">data science certificates</span>:
+            </h3>
+            
+             <ul class="certifications-list tech-list">
+                <li>Kaggle: Geospatial Analysis</li>
+                <li>Kaggle: Data Visualization</li>
+                <li>Kaggle: Pandas</li>
+            </ul>
+            
         </div>
         
         <div class="certifications-lists-right">
             <h3>
-                Here are other <span style="color: #64ffda;">certifications</span> I have <span style="color: #64ffda;">achieved</span>:
+                Here are other <span style="color: #e667ff;">certificates</span> I have <span style="color: #e667ff;">achieved</span>:
             </h3>
             <ul class="certifications-list tech-list">
                 <li>Google Cloud Fundamentals: Core Infrastructure</li>
                 <li>Essential Google Cloud Infrastructure: Foundation</li>
+                <li>Deploy and Monitor in Google Cloud for AWS Professionals</li>
+                <li>Google Cloud IAM and Networking for AWS Professionals</li>
                 <li>Google Cloud:Introduction to Generative AI</li>
                 <li>Stanford Online: Supervised Machine Learning:Regression & Classification</li>
                 <li>Meta:Programming with JavaScript</li>
@@ -151,13 +167,33 @@
         </div>
     </div>
 </section>
-
-
-                
-
+         <a href="http://maui-fire.ikewai.org/" class="button">
+                <img src="MFR.png" alt="MauiFireResearch" class="email-icon">
+                Maui Fire Research
+            </a> <h3>Join us in creating a comprehensive understanding of the Maui wildfires to help make Maui safer.</h3>
         <section id="projects">
             <div class="projects-heading">
-                <h1><span class="blinking-letter">/</span>Projects</h1>
+                <h1><span class="blinking-letter">/</span>Internships & Projects</h1>
+                <h3>
+                <span style="color: #e667ff;">Maui Fire Research</span>: UH Manoa & UH Maui College students as well as graduate students from US universities and expert university and national laboratory teams working together in the research funded by Rapid Response Research (RAPID) grants from the National Science Foundation (NSF).
+            </h3>
+            <h3>
+                <span style="color: #e667ff;">Oceanit: Climate
+Change Toolkit
+at Paia Mantokuji</span>: The urgency of this initiative cannot be overstated. The shoreline fronting the historic Buddhist temple at Mantokuji Mission is facing severe erosion, with its beach vanishing at an alarming rate. Our team, including fellow Maui college students, is dedicated to finding sustainable, ecosystem-based solutions to counteract this predicament.
+            </h3>
+            
+             <h3>
+                <span style="color: #e667ff;">Workshops, Fall 2023</span>: Engineering Programming & Design languages
+            </h3>
+            <li>MTLAB(MATrix LABoratory, 9/15/2023</li>
+                <li>Python, 10/6/2023</li>
+                <li>Arduino I, 10/20/2023</li>
+                <li>Arduino II, 11/3/2023</li>
+                <li>SolidWorks, 12/1/2023</li>
+                <li>Instructor: Dr. J. Park (University of Hawaii Maui College)</li>
+              
+            
                 <hr>
             </div>
         </section>
