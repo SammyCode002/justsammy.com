@@ -1,221 +1,368 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProjectSammy</title>
-    <link rel="stylesheet" href="app.css?v=9">
-    <script src="script.js?v=9"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="fractaltree.js"></script>
-</head>
-<body> 
-    
-    <div class="navbar-container">
-        <nav>
-            <div class="nav-links">
-                <a href="#home">/home</a>
-                <a href="#about">/about</a>
-                <a href="#certifications">/certifications</a>
-                <a href="#projects">/projects</a>
-              
-            </div>
-        </nav>
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
 
-    <header>
-        <div class="header-content">
-            <h1>hi, <span class="name">sammy</span> here<span class="blinking-letter">.</span></h1>
+body {
+    font-family: 'NTR', sans-serif;
+    background-color: #0a192f;
+    color: #ccd6f6;
+    line-height: 1.6;
+}
 
-            <a href="mailto:hellosenpai@justsammy.com" class="button">
-                <img src="pngwing.com.png" alt="Email Icon" class="email-icon">
-                Say hi!
-            </a>
-        </div>
-    </header>
-    
-    <div class="intro-container">
-        <h2 class="intro-heading">"<span class="blinking-letter">Hello</span>, World!"</h2>
-        <p class="intro-paragraph">
-            Your local <span style="color: #e667ff;">nerd</span>, <span style="color: #e667ff;">gamer</span>, and <span style="color: #e667ff;">artist</span> based in <span style="color: #e667ff;">Hawaii</span>. 
-            I have great <span style="color: #e667ff;">interest</span> in <span style="color: #ffffff;"> video games</span>,<span style="color: #ffffff;"> anime</span>, <span style="color: #ffffff;"> art</span>,
-            <span style="color: #e667ff;">tech field</span>- <span style="color: #ffffff;">data science, cybersecurity, machine learning,</span> and <span style="color: #e667ff;">everything</span>
-            in between.
-        </p>
-    </div>
+/* Header Styles */
+header {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    padding: 20px;
+    text-align: center;
+}
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/samdameg/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-             <a href="https://beacons.ai/justsammy/" target="_blank">
-                <i class="fa-solid fa-b"></i>
-            </a>
-            <a href="https://github.com/SammyCode002" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-             <a href="https://www.instagram.com/justsammy_21/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-             <a href="https://www.facebook.com/JustSammy21/" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-        </div>
-    </div>
+.header-content {
+    text-align: center;
+}
 
-    <div class="message-board">
-        <h3>Message of the Day</h3>
-        <ul id="message-list">
-            <li>“Great things are done by a series of small things brought together.”<br> - Vincent van Gogh
-                 </li>
-        </ul>
-    </div>
-    
-    <main>
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.name {
+    color: #c9a0dc; /* Changed to pastel purple */
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.intro-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #e6f1ff;
+}
+
+.intro-paragraph {
+    font-size: 20px;
+    text-align: center;
+    color: #a8b2d1;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0a192f;
+    margin-top: 20px; 
+}
+
+/* Button Styles */
+.button {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center; 
+    padding: 10px 20px;
+    background-color: #c9a0dc; /* Changed to pastel purple */
+    color: #0a192f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.email-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #8892b0;
+    color: #e6f1ff;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #0a192f; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; 
+}
+
+.nav-links {
+    display: flex; 
+}
+
+nav a {
+    color: #ccd6f6; 
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+nav a:last-child {
+    margin-right: 0; 
+}
+
+nav a:hover {
+    color: #c9a0dc; /* Changed to pastel purple */
+}
+
+/* Social Links Styles */
+.social-links {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex; 
+    align-items: center;
+}
+
+.social-links a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    color: #c9a0dc; /* Changed to pastel purple */
+}
 
 
-        <section id="about">
-            <div class="about-heading">
-                <h1>/About<span class="blinking-letter"> Me </span></h1>
-                <hr>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                    
-                          Hi there! I'm an <span style="color: #e667ff;"> avid </span> self-learner, <span style="color: #e667ff;">artist</span>, <span style="color: #e667ff;">gamer</span> and a<span style="color: #e667ff;"> techie</span>.  My <span style="color: #e667ff;">career interest</span> lies in <span style="color: #e667ff;">computer science and information technology</span>. Currently, I'm attending the<span style="color: #e667ff;"> University of Hawaii Maui</span>, majoring in <span style="color: #e667ff;">Natural Science</span> with a focus on<span style="color: #e667ff;"> Information & Communications Technology</span>. In addition to my academic pursuits, I'm currently interning with<span style="color: #e667ff;"> Oceanit</span>, working on the <span style="color: #e667ff;">Climate Change Toolkit at Paia Mantokuji</span>. This exciting opportunity involves engaging in <span style="color: #e667ff;">topography and bathymetry</span>. In my free time, I'm taking online <span style="color: #e667ff;">cybersecurity</span> courses, completing programs from<span style="color: #e667ff;"> Google, Cisco, (ISC)²,</span> and more. Beyond that, I've been self-learning program languages like <span style="color: #e667ff;">java, python, js</span> & topics like <span style="color: #e667ff;">machine learning, cloud computing,</span> and more on platforms like COURSERA, UDEMY and KAGGLE. Outside of school & work, I enjoy playing <span style="color: #e667ff;">video games</span>, creating <span style="color: #e667ff;">art</span>, and
-                            I'm a big fan of <span style="color: #e667ff;">anime</span> and <span style="color: #e667ff;">manga</span>. I also prioritize <span style="color: #e667ff;">self-care, fitness</span> and <span style="color: #e667ff;">family</span>. 
-                    </p>
-                </div>
-            
-                <div>
-                <img src="aboutmepic.jpg" alt="Sammy's Picture" class="about-img">
-            </div>
-            
-            <div class="about-lists">
-                <ul class="about-list tech-list">
-                    <p>
-                        Here are some <span style="color: #e667ff;">technologies</span> I have been learning and working with:
-                    </p>
-                    <li>Javascript</li>
-                    <li>Node.js</li>
-                    <li>React.js</li>
-                    <li>HTML &amp; CSS</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>Wireshark</li>
-                    <li>Splunk</li>
-                    <li>VM Virtual Box</li>
-                    <li>Matlab</li>
-                </ul>
-                
-            </div>
-        </section>
-        
-      <section id="certifications">
-    <div class="certifications-heading">
-        <h2>/Certification<span class="blinking-letter">s</span></h2>
-        <hr>
-    </div>
-    <div class="certifications-content">
-        <div class="certifications-lists-left">
-            <h3>
-                Here are some of my <span style="color: #e667ff;">cybersecurity certificates</span>:
-            </h3>
-            <ul class="certifications-list tech-list">
-                <li>Google Cybersecurity Specialization</li>
-                <li>(ISC)² Certified in Cybersecurity Specialization</li>
-                <li>Python for Cybersecurity Specialization</li>
-                <li>Cisco Cybersecurity Operations Fundamentals Specialization</li>
-                <li>IBM:Cybersecurity Tools & Cyber Attacks</li>
-                <li>IBM:Cybersecurity Roles, Processes & Operating System Security</li>
-                <li>Wireshark Essential Training</li>
-                <li>Wireshark Functionality</li>
-                <li>Splunk for Security Analytics and Monitoring</li>
-            </ul>
-            
-             <h3>
-                Here are some of my <span style="color: #e667ff;">data science certificates</span>:
-            </h3>
-            
-             <ul class="certifications-list tech-list">
-                <li>Kaggle: Geospatial Analysis</li>
-                <li>Kaggle: Data Visualization</li>
-                <li>Kaggle: Pandas</li>
-            </ul>
-            
-        </div>
-        
-        <div class="certifications-lists-right">
-            <h3>
-                Here are other <span style="color: #e667ff;">certificates</span> I have <span style="color: #e667ff;">achieved</span>:
-            </h3>
-            <ul class="certifications-list tech-list">
-                <li>Google Cloud Fundamentals: Core Infrastructure</li>
-                <li>Essential Google Cloud Infrastructure: Foundation</li>
-                <li>Deploy and Monitor in Google Cloud for AWS Professionals</li>
-                <li>Google Cloud IAM and Networking for AWS Professionals</li>
-                <li>Google Cloud:Introduction to Generative AI</li>
-                <li>Stanford Online: Supervised Machine Learning:Regression & Classification</li>
-                <li>Meta:Programming with JavaScript</li>
-                <li>Meta:Introduction to Front-End Development</li>
-                <li>Meta:Android Mobile Application Development</li>
-            </ul>
-        </div>
-    </div>
-</section>
-         <a href="http://maui-fire.ikewai.org/" class="button">
-                <img src="MFR.png" alt="MauiFireResearch" class="email-icon">
-                Maui Fire Research
-            </a> <h3>Join us in creating a comprehensive understanding of the Maui wildfires to help make Maui safer.</h3>
-        <section id="projects">
-            <div class="projects-heading">
-                <h1><span class="blinking-letter">/</span>Internships & Projects</h1>
-                <h3>
-                <span style="color: #e667ff;">Maui Fire Research</span>: UH Manoa & UH Maui College students as well as graduate students from US universities and expert university and national laboratory teams working together in the research funded by Rapid Response Research (RAPID) grants from the National Science Foundation (NSF).
-            </h3>
-            <h3>
-                <span style="color: #e667ff;">Oceanit: Climate
-Change Toolkit
-at Paia Mantokuji</span>: The urgency of this initiative cannot be overstated. The shoreline fronting the historic Buddhist temple at Mantokuji Mission is facing severe erosion, with its beach vanishing at an alarming rate. Our team, including fellow Maui college students, is dedicated to finding sustainable, ecosystem-based solutions to counteract this predicament.
-            </h3>
-            
-             <h3>
-                <span style="color: #e667ff;">Workshops, Fall 2023</span>: Engineering Programming & Design languages
-            </h3>
-            <li>MTLAB(MATrix LABoratory, 9/15/2023</li>
-                <li>Python, 10/6/2023</li>
-                <li>Arduino I, 10/20/2023</li>
-                <li>Arduino II, 11/3/2023</li>
-                <li>SolidWorks, 12/1/2023</li>
-                <li>Instructor: Dr. J. Park (University of Hawaii Maui College)</li>
-              
-            
-                <hr>
-            </div>
-        </section>
-    
-        
-    </main> <!-- Closing of the main element -->
+#fractal-tree {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
 
-    <footer>
-        <p>&copy; Built and designed by Sammy. All rights reserved.</p>
-    </footer>
+#message-board {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #0a192f;
+    color: #FFFFFF; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
-    <script>
-        const navLinks = document.querySelectorAll('.nav-links a');
+#message-board h3 {
+    color: #c9a0dc; /* Changed to pastel purple */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', event => {
-                event.preventDefault();
-                const targetSection = document.querySelector(link.getAttribute('href'));
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+#message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-</body>
-</html>
+#message-list li {
+    color: #FFFFFF; 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    background-color: #0a192f;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #e6f1ff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #233554;
+    color: #ccd6f6;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-family: 'NTR', sans-serif;
+    font-size: 14px;
+    color: #a8b2d1;
+}
+
+
+  /* About Me Section Styles */
+  #about-me {
+    background-color: #233554;
+    color: #ccd6f6;
+    padding: 40px;
+    margin-top: -40px; /* Use a negative margin to overlap the about me section with the fractal tree */
+    z-index: 1; /* Set a higher z-index to ensure it appears above other elements */
+    position: relative; /* Add a relative position to the about me section */
+  }
+
+.about-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-heading h1 {
+    font-size: 28px;
+    margin-right: 10px;
+    color: #c9a0dc; /* Changed to pastel purple */
+}
+
+.about-heading hr {
+    flex: 1;
+    border: none;
+    border-top: 2px solid #c9a0dc; /* Changed to pastel purple */
+    margin: 0 10px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+.about-content img {
+    width: 280px;
+    height: 300px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.about-lists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    max-width: 300px;
+    margin-left: 40px; /* Adjust the left margin to move the list to the right */
+}
+
+.about-list {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.tech-list li::marker {
+    color: #c9a0dc; /* Changed to pastel purple */
+}
+
+#certifications {
+    background-color: #233554;
+    color: #ccd6f6;
+    padding: 40px;
+}
+
+.certifications-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.certifications-heading h2 {
+    font-size: 28px;
+    margin-right: 10px;
+    color: #c9a0dc; /* Changed to pastel purple */
+}
+
+.certifications-heading hr {
+    flex: 1;
+    border: none;
+    border-top: 2px solid #c9a0dc; /* Changed to pastel purple */
+    margin: 0 10px;
+}
+
+.certifications-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.certifications-list {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.certifications-list h3 {
+    color: #c9a0dc; /* Changed to pastel purple */
+}
+
+.certifications-list li {
+    margin-bottom: 10px;
+    list-style-type: square;
+}
+
+/* Blinking Cursor Animation */
+.blinking-letter {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        position: static;
+        transform: translateY(0);
+        margin-top: 10px;
+    }
+
+    .navbar-container {
+        margin-top: 70px;
+    }
+}
+
+
+
+
