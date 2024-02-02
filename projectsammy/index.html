@@ -1,368 +1,303 @@
-/* Reset some default styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectSammy</title>
+    <link rel="stylesheet" href="app.css?v=4">
+    <script src="script.js?v=4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="fractaltree.js"></script>
+</head>
 
-body {
-    font-family: 'NTR', sans-serif;
-    background-color: #0a192f;
-    color: #ccd6f6;
-    line-height: 1.6;
-}
+<body>
+  
+  <div class="navbar-container">
+    <nav>
+      <div class="nav-links">
+        <a href="#home">/JustSammY</a>
+        <a href="#about">/about</a>
+        <a href="#experience">/experience</a>
+        <a href="#projects">/projects</a>
+      </div>
+    </nav>
 
-/* Header Styles */
-header {
-    background-color: #0a192f;
-    color: #ccd6f6;
-    padding: 20px;
-    text-align: center;
-}
+    <header>
+      <div class="header-content">
+        <h1>hi, <span class="name">sammy</span> here<span class="blinking-letter">.</span></h1>
 
-.header-content {
-    text-align: center;
-}
+        <a href="mailto:hellosenpai@justsammy.com" class="button">
+          <img src="profilepic" alt="Email Icon" class="email-icon">
+          Say hi!
+        </a>
+      </div>
+    </header>
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
+    <div class="intro-container">
+      <h2 class="intro-heading">"<span class="blinking-letter">Hello</span>, World!"</h2>
+      <p class="intro-paragraph">
+        Your local <span style="color: #e667ff;">nerd</span>, <span style="color: #e667ff;">gamer</span>, and <span style="color: #e667ff;">artist</span> based in <span style="color: #e667ff;">Hawaii</span>.
+        I have great <span style="color: #e667ff;">interest</span> in <span style="color: #ffffff;"> video games</span>,<span style="color: #ffffff;"> anime</span>, <span style="color: #ffffff;"> art</span>,
+        <span style="color: #e667ff;">tech field</span>- <span style="color: #ffffff;">data science, cybersecurity, machine learning,</span> and <span style="color: #e667ff;">everything</span>
+        in between.
+      </p>
+    </div>
 
-.name {
-    color: #c9a0dc; /* Changed to pastel purple */
-}
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/samdameg/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://beacons.ai/justsammy/" target="_blank">
+        <i class="fa-solid fa-b"></i>
+      </a>
+      <a href="https://github.com/SammyCode002" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    <a href="https://www.instagram.com/justsammy_21/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/JustSammy21/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+</div>
 
-.intro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
+<div class="message-board">
+  <h3>Message of the Day</h3>
+  <ul id="message-list">
+    <li>“Vision without action is a daydream; action without vision is a nightmare.”<br>
+    </li>
+  </ul>
+</div>
 
-.intro-heading {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #e6f1ff;
-}
+<main>
 
-.intro-paragraph {
-    font-size: 20px;
-    text-align: center;
-    color: #a8b2d1;
-    max-width: 600px; 
-    margin: 0 auto; 
-}
+  <section id="about">
+    <div class="about-heading">
+      <h1>/About<span class="blinking-letter"> Me </span></h1>
+      <hr>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
 
-.navbar-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #0a192f;
-    margin-top: 20px; 
-}
+          Hi there! I'm an <span style="color: #e667ff;"> avid </span> self-learner, <span style="color: #e667ff;">artist</span>, <span style="color: #e667ff;">gamer</span> and a<span style="color: #e667ff;"> techie</span>. My <span style="color: #e667ff;">career interest</span> lies in <span style="color: #e667ff;">computer science and information technology</span>. Currently, I'm attending the<span style="color: #e667ff;"> University of Hawaii Maui</span>, majoring in <span style="color: #e667ff;">Natural Science</span> with a focus on<span style="color: #e667ff;"> Information & Communications Technology and Data Science</span>. In addition to my academic pursuits, I'm currently interning with <a href="https://www.oceanit.com/" target="_blank"><span style="color: #e667ff;">Oceanit, UH Cyberinfrastructure, MFR RAPID-NSF.</span></a> Outside of school & work, I enjoy playing <span style="color: #e667ff;">video games,</span>, creating <span style="color: #e667ff;">YouTube videos and art</span>, and
+          I'm a big fan of <span style="color: #e667ff;">anime</span> and <span style="color: #e667ff;">manga</span>. I also prioritize <span style="color: #e667ff;">self-care, family</span> and <span style="color: #e667ff;">fitness</span>.
+        </p>
+      </div>
 
-/* Button Styles */
-.button {
-    display: inline-flex; 
-    align-items: center;
-    justify-content: center; 
-    padding: 10px 20px;
-    background-color: #c9a0dc; /* Changed to pastel purple */
-    color: #0a192f;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
+      <div>
+        <img src="aboutmepic.jpg" alt="Sammy's Picture" class="about-img">
+      </div>
 
-.email-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
+      <div class="about-lists">
+        <ul class="about-list tech-list">
+          <p>
+            Here are some <span style="color: #e667ff;">technologies</span> I have been learning and working with:
+          </p>
+          <li>ArcGIS</li>
+          <li>Jupyter Notebook</li>
+          <li>Matlab</li>
+          <li>C++</li>
+          <li>Python</li>
+          <li>Javascript</li>
+          <li>Node.js</li>
+          <li>React.js</li>
+          <li>HTML &amp; CSS</li>
+          <li>Java</li>
+          <li>Wireshark</li>
+          <li>Splunk</li>
+          <li>Excel</li>
+        </ul>
 
-.button:hover {
-    background-color: #8892b0;
-    color: #e6f1ff;
-}
+      </div>
+  </section>
 
-/* Navigation Styles */
-nav {
-    background-color: #0a192f; 
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999; 
-}
+  <section id="projects" class="text-white py-12 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="title-with-lines mb-8">
+        <h2 class="text-4xl font-bold inline-block relative">/ projects</h2>
+      </div>
+<div>
+        <img src="climatechangetoolkit.jpeg" alt="samanddyther" class="cctk-img">
+        <img src="onevision.jpg" alt="samanddyther" class="cctk-img">
+        <img src="racecarkit.jpeg" alt="etro" class="rck-img">
+        <img src="etro.jpeg" alt="etro" class="rck-img">
+      </div>
+    </div>
+  </section>
 
-.nav-links {
-    display: flex; 
-}
+  <section id="experience" class="text-white py-12 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap md:flex-nowrap">
+        <div class="w-full md:w-1/4">
+          <h2 class="text-4xl font-bold mb-8">/ experience</h2>
+          <ul class="experience-menu">
+            <li class="mb-4 font-bold text-green-300 cursor-pointer">CERTIFICATES</li>
+            <li class="mb-4 cursor-pointer">UNIVERSITY OF HAWAII MAUI</li>
+            <li class="mb-4 cursor-pointer">MAUI FIRE RESEARCH BY RAPID-NSF</li>
+            <li class="mb-4 cursor-pointer">OCEANIT</li>
+            <li class="cursor-pointer">UH CYBERINFRASTRUCTURE</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-3/4">
+          <!-- Experience details will be displayed here -->
+          <div class="experience-details">
+            <!-- Each div here corresponds to a menu item above -->
+            <div class="mb-8">
+              <h3>
+                My online course <a href="https://www.linkedin.com/in/samdameg/details/certifications/" target="_blank"><span style="color: #e667ff;">cybersecurity certificates</span></a>:
+              </h3>
+              <ul class="certifications-list tech-list">
+                <li>Google Cybersecurity Specialization</li>
+                <li>(ISC)² Certified in Cybersecurity Specialization</li>
+                <li>Python for Cybersecurity Specialization</li>
+                <li>Cisco Cybersecurity Operations Fundamentals Specialization</li>
+                <li>IBM:Cybersecurity Tools & Cyber Attacks</li>
+                <li>IBM:Cybersecurity Roles, Processes & Operating System Security</li>
+                <li>Wireshark Essential Training</li>
+                <li>Wireshark Functionality</li>
+                <li>Splunk for Security Analytics and Monitoring</li>
+              </ul>
+              <h3>
+                Other <a href="https://www.linkedin.com/in/samdameg/details/certifications/" target="_blank"><span style="color: #e667ff;">Certificates</span></a> I have <span style="color: #e667ff;">achieved</span>:
+              </h3>
+              <ul class="certifications-list tech-list">
+                <li>Google Cloud Fundamentals: Core Infrastructure</li>
+                <li>Essential Google Cloud Infrastructure: Foundation</li>
+                <li>Deploy and Monitor in Google Cloud for AWS Professionals</li>
+                <li>Google Cloud IAM and Networking for AWS Professionals</li>
+                <li>Google Cloud:Introduction to Generative AI</li>
+                <li>Stanford Online: Supervised Machine Learning:Regression & Classification</li>
+                <li>Meta:Programming with JavaScript</li>
+                <li>Meta:Introduction to Front-End Development</li>
+                <li>Meta:Android Mobile Application Development</li>
+                <h3>
+                  <span style="color: #e667ff;">Data Science Certificates</span>:
+                </h3>
 
-nav a {
-    color: #ccd6f6; 
-    text-decoration: none;
-    font-size: 18px;
-    margin-right: 20px;
-}
+                <ul class="certifications-list tech-list">
+                  <li><a href="https://www.kaggle.com/learn/certification/sdameg/geospatial-analysis" target="_blank"><span style="color: #ffffff;">Kaggle: Geospatial Analysis</span></a></li>
+                  <li><a href="https://www.kaggle.com/learn/certification/sdameg/data-visualization" target="_blank"><span style="color: #ffffff;">Kaggle: Data Visualization</span></a></li>
+                  <li><a href="https://www.kaggle.com/learn/certification/sdameg/pandas" target="_blank"><span style="color: #ffffff;">Kaggle: Pandas</span></a></li>
+                  <li><a href="https://www.kaggle.com/learn/certification/sdameg/data-cleaning" target="_blank"><span style="color: #ffffff;">Kaggle: Data Cleaning</span></a></li>
+                </ul>
 
-nav a:last-child {
-    margin-right: 0; 
-}
+            </div>
+            <div class="mb-8">
+             <h3>Student Helper Experience at University of Hawaii, Maui</h3>
+    <p>During the 2023 fall semester at the University of Hawaii, Maui, I had the privilege of working under the mentorship of Dr. J. Park in the Electronic Computer Engineering Technology department. This role offered me extensive hands-on experience, including:</p>
+    <ul>
+        <li>Technical Skills: Assisted in dismantling and refurbishing old computers, including part removal and system diagnosis.</li>
+        <li>Equipment Maintenance: Played a pivotal role in repairing and maintaining printers.</li>
+        <li>Mentorship: Received invaluable mentorship from Dr. J. Park, enriching my knowledge in electronic and computer engineering principles.</li>
+        <li>Commitment: Worked a minimum of four hours per week, contributing significantly to the department's operations.</li>
+        <li>Recognition and Reward: Awarded a stipend for my contributions, reflecting the value of my work within the department.</li>
+    </ul>
+    <p>This experience was instrumental in developing my technical acumen, problem-solving abilities, and understanding of electronic and computer engineering operations, under the guidance and mentorship of Dr. J. Park.</p>
+    
+    
+    <h3>Workshops: Engineering Programming & Design languages</h3>
+    <p>Instructor: Dr. J. Park</p>
+    <ol>
+        <li>
+            <strong>MATLAB, 9/15/2023:</strong> MATLAB (MATrix LABoratory) is a programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages.
+        </li>
+        <li>
+            <strong>Python, 10/6/2023:</strong> Python is a high-level computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be used to create a variety of different programs and isn't specialized for any specific problems. It supports multiple programming paradigms, including structured, object-oriented and functional programming.
+        </li>
+        <li>
+            <strong>Arduino I, 10/20/2023</strong>
+        </li>
+        <li>
+            <strong>Arduino II, 11/3/2023:</strong> The Arduino is an open source microcontroller platform that you use for sensing both digital and analog input signals and for sending digital and analog output signals to control devices.
+        </li>
+        <li>
+            <strong>SolidWorks, 12/1/2023:</strong> SolidWorks is a solid modeling computer-aided design (CAD) and computer-aided engineering (CAE) application published by Dassault Systèmes. SolidWorks is used to develop mechatronics systems from beginning to end. At the initial stage, the software is used for planning, visual ideation, modeling, feasibility assessment, prototyping, and project management. The software is then used for design and building of mechanical, electrical, and software elements.
+        </li>
+    </ol>
+</div>
 
-nav a:hover {
-    color: #c9a0dc; /* Changed to pastel purple */
-}
+            <!-- Detail for MFR RAPID-NSF -->
+<div class="mb-8">
+  <a href="http://maui-fire.ikewai.org/" class="button">
+    <img src="MFR.png" alt="MauiFireResearch" class="email-icon"> Maui Fire Research
+  </a>
+  <h3>Join us in creating a comprehensive understanding of the Maui wildfires to help make Maui safer.</h3>
+  <p>
+    <strong>About the Project:</strong><br>
+    As a key member of the University of Hawaii Maui College (UHMC) team, I am deeply involved in the Maui Fire Research Initiative. This project, crucial for understanding and mitigating the wildfire challenges in Maui, especially after the Lahaina fires of August 2023, is underpinned by the support from the National Science Foundation through Rapid Response Research (RAPID) grants. Our work is at the intersection of advanced technology and local wisdom, aiming to devise strategies that enhance community safety and wildfire preparedness.
+  </p>
+  <p>
+    <strong>My Contribution:</strong><br>
+    Working closely with my data science professor, three classmates, under the leadership of Alice Koniges and David Eder, and collaborating with other prestigious institutions, my role encompasses fire modeling, comprehensive data collection, engaging with the Maui community, and thorough analysis of gathered information. This collaborative effort is dedicated to building a detailed model of wildfire spread and its interaction with urban and natural landscapes.
+</p>
 
-/* Social Links Styles */
-.social-links {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex; 
-    align-items: center;
-}
-
-.social-links a {
-    color: #ccd6f6;
-    text-decoration: none;
-    font-size: 24px;
-    margin-right: 10px;
-}
-
-.social-links a:hover {
-    color: #c9a0dc; /* Changed to pastel purple */
-}
-
-
-#fractal-tree {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  }
-
-#message-board {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-color: #0a192f;
-    color: #FFFFFF; 
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-#message-board h3 {
-    color: #c9a0dc; /* Changed to pastel purple */
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#message-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#message-list li {
-    color: #FFFFFF; 
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* Main Content Styles */
-main {
-    padding: 20px;
-    background-color: #0a192f;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #e6f1ff;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #233554;
-    color: #ccd6f6;
-    text-align: center;
-    padding: 10px;
-}
-
-footer p {
-    font-family: 'NTR', sans-serif;
-    font-size: 14px;
-    color: #a8b2d1;
-}
-
-
-  /* About Me Section Styles */
-  #about-me {
-    background-color: #233554;
-    color: #ccd6f6;
-    padding: 40px;
-    margin-top: -40px; /* Use a negative margin to overlap the about me section with the fractal tree */
-    z-index: 1; /* Set a higher z-index to ensure it appears above other elements */
-    position: relative; /* Add a relative position to the about me section */
-  }
-
-.about-heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.about-heading h1 {
-    font-size: 28px;
-    margin-right: 10px;
-    color: #c9a0dc; /* Changed to pastel purple */
-}
-
-.about-heading hr {
-    flex: 1;
-    border: none;
-    border-top: 2px solid #c9a0dc; /* Changed to pastel purple */
-    margin: 0 10px;
-}
-
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-text {
-    flex: 1;
-    max-width: 600px;
-    margin-right: 20px;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.about-text p {
-    margin: 0;
-}
-
-.about-content img {
-    width: 280px;
-    height: 300px;
-    border-radius: 15px;
-    margin: 0 auto;
-}
-
-.about-lists {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1;
-    max-width: 300px;
-    margin-left: 40px; /* Adjust the left margin to move the list to the right */
-}
-
-.about-list {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.tech-list li::marker {
-    color: #c9a0dc; /* Changed to pastel purple */
-}
-
-#certifications {
-    background-color: #233554;
-    color: #ccd6f6;
-    padding: 40px;
-}
-
-.certifications-heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.certifications-heading h2 {
-    font-size: 28px;
-    margin-right: 10px;
-    color: #c9a0dc; /* Changed to pastel purple */
-}
-
-.certifications-heading hr {
-    flex: 1;
-    border: none;
-    border-top: 2px solid #c9a0dc; /* Changed to pastel purple */
-    margin: 0 10px;
-}
-
-.certifications-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.certifications-list {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.certifications-list h3 {
-    color: #c9a0dc; /* Changed to pastel purple */
-}
-
-.certifications-list li {
-    margin-bottom: 10px;
-    list-style-type: square;
-}
-
-/* Blinking Cursor Animation */
-.blinking-letter {
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
+  <p>
+    <strong>Collaborative Efforts:</strong><br>
+    Our team at UHMC is not working in isolation. We're part of a larger network that includes experts from institutions such as the UH Manoa, University at Buffalo, University of Nevada Reno, and the National Center for Atmospheric Research (NCAR), among others. This collaboration allows us to leverage a wide range of expertise, ensuring our research is robust, comprehensive, and actionable.
+  </p>
+</div>
 
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-links {
-        position: static;
-        transform: translateY(0);
-        margin-top: 10px;
-    }
-
-    .navbar-container {
-        margin-top: 70px;
-    }
-}
+<!-- Detail for OCEANIT -->
+<div class="mb-8">
+  <h3>Oceanit: Climate Change Toolkit at Paia Mantokuji</h3>
+  <p>
+    As a student ambassador / intern at Oceanit, I engage in vital climate action using our Climate Change Toolkit at the historic Mantokuji in Paia. This suite of strategies and software solutions, including ArcGIS, Python, and MATLAB, empowers us to mitigate shoreline erosion and adapt to environmental changes. Our work, deeply rooted in science and community collaboration, aims to preserve Mantokuji's natural beauty and cultural significance for future generations.
+  </p>
+</div>
 
 
+            <!-- Detail for UH CYBERINFRASTRUCTURE -->
+            <div class="mb-8">
+              <h3>University of Hawai'i: System Cyberinfrastructure REU</h3>
+              <p>
+                Research experience for undergraduate opportunity funded through CC* Data Storage: KoaStore: A High Performance and Flexible Research Storage Resource project at the University of Hawai‘i.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+ 
+    <div id="fractal-tree"></div>
+
+
+
+</main> 
+
+<!-- Closing of the main element -->
+
+
+
+
+<footer>
+  <p>&copy; Built and designed by Sammy. All rights reserved.</p>
+</footer>
+
+<script>
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const targetSection = document.querySelector(link.getAttribute('href'));
+      targetSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+
+</html>
 
 
