@@ -1,4 +1,3 @@
-/* Reset some default styles */
 body, h1, h2, h3, h4, h5, h6, p, ul, li {
     margin: 0;
     padding: 0;
@@ -29,7 +28,7 @@ h1 {
 }
 
 .name {
-    color: #64ffda; 
+    color: #c9a0dc; /* pastel purple */
 }
 
 .intro-container {
@@ -69,7 +68,7 @@ h1 {
     align-items: center;
     justify-content: center; 
     padding: 10px 20px;
-    background-color: #64ffda;
+    background-color: #c9a0dc; /* pastel purple */
     color: #0a192f;
     text-decoration: none;
     border-radius: 5px;
@@ -78,9 +77,9 @@ h1 {
 }
 
 .email-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
 }
 
 .button:hover {
@@ -118,7 +117,7 @@ nav a:last-child {
 }
 
 nav a:hover {
-    color: #64ffda; 
+    color: #c9a0dc; /* pastel purple */
 }
 
 /* Social Links Styles */
@@ -139,8 +138,19 @@ nav a:hover {
 }
 
 .social-links a:hover {
-    color: #64ffda;
+    color: #c9a0dc; /* pastel purple */
 }
+
+
+#fractal-tree {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
 
 #message-board {
     position: fixed;
@@ -155,7 +165,7 @@ nav a:hover {
 }
 
 #message-board h3 {
-    color: #64ffda;
+    color: #c9a0dc; /* pastel purple */
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -202,12 +212,16 @@ footer p {
     color: #a8b2d1;
 }
 
-/* About Me Section Styles */
-#about-me {
+
+  /* About Me Section Styles */
+  #about-me {
     background-color: #233554;
     color: #ccd6f6;
     padding: 40px;
-}
+    margin-top: -40px; /
+    z-index: 1; /
+    position: relative; /* Add a relative position to the about me section */
+  }
 
 .about-heading {
     display: flex;
@@ -219,15 +233,16 @@ footer p {
 .about-heading h1 {
     font-size: 28px;
     margin-right: 10px;
-    color: #64ffda;
+    color: #c9a0dc; /* pastel purple */
 }
 
 .about-heading hr {
     flex: 1;
     border: none;
-    border-top: 2px solid #64ffda;
+    border-top: 2px solid #c9a0dc; /* pastel purple */
     margin: 0 10px;
 }
+
 
 .about-content {
     display: flex;
@@ -241,7 +256,7 @@ footer p {
     max-width: 600px;
     margin-right: 20px;
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .about-text p {
@@ -269,58 +284,6 @@ footer p {
     font-size: 18px;
 }
 
-.tech-list li::marker {
-    color: #64ffda;
-}
-
-
-
-
-#certifications {
-    background-color: #233554;
-    color: #ccd6f6;
-    padding: 40px;
-}
-
-.certifications-heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.certifications-heading h2 {
-    font-size: 28px;
-    margin-right: 10px;
-    color: #64ffda;
-}
-
-.certifications-heading hr {
-    flex: 1;
-    border: none;
-    border-top: 2px solid #64ffda;
-    margin: 0 10px;
-}
-
-.certifications-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.certifications-list {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.certifications-list h3 {
-    color: #64ffda;
-}
-
-.certifications-list li {
-    margin-bottom: 10px;
-    list-style-type: square;
-}
 
 
 /* Blinking Cursor Animation */
@@ -336,6 +299,7 @@ footer p {
         opacity: 0;
     }
 }
+
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
@@ -354,4 +318,174 @@ footer p {
         margin-top: 70px;
     }
 }
+
+.container-relative {
+    position: relative;
+    /* Other styles for the container */
+}
+
+#fractal-tree canvas {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; 
+}
+
+
+
+/* Additional styles for the new Projects and Experience sections */
+.bg-gray-900 {
+    background-color: #0a192f;
+}
+
+.text-teal-400 {
+    color: #38b2ac;
+}
+
+.bg-gray-800 {
+    background-color: #2d3748;
+}
+
+.text-gray-400 {
+    color: #a0aec0;
+}
+
+.text-green-300 {
+    color: #68d391;
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+/* ... other styles as needed ... */
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.snap-x {
+    scroll-snap-type: x mandatory;
+}
+
+.snap-start {
+    scroll-snap-align: start;
+}
+
+.flex-none {
+    flex: none;
+}
+
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Add rounded corners to the container */
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+/* For the padding inside the project containers */
+.p-6 {
+    padding: 1.5rem;
+}
+
+/* ... other styles ... */
+.title-with-lines h2 {
+    position: relative;
+    padding-bottom: 0.5rem; /* Adjust the space below the title */
+}
+
+.title-with-lines h2::before,
+.title-with-lines h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Align with the bottom of the title */
+    left: 50%;
+    width: 3rem; /* Length of the lines */
+    height: 2px; /* Thickness of the lines */
+    background-color: #4fd1c5; /* Color of the lines */
+    transform: translateX(-50%);
+}
+
+.title-with-lines h2::before {
+    margin-left: -3.5rem; /* Adjust space between the lines */
+}
+
+.title-with-lines h2::after {
+    margin-left: 0.5rem; /* Adjust space between the lines */
+}
+/* Additional styles for the experience section */
+.bg-gray-900 {
+    background-color: #0a192f; /* Change as needed */
+}
+
+.text-green-300 {
+    color: #68d391; /* Change as needed */
+}
+
+.experience-menu li {
+    transition: color 0.3s;
+}
+
+.experience-menu li:hover {
+    color: #68d391; /* Change as needed */
+}
+
+.experience-details > div {
+    display: none; /* Hide all details by default */
+}
+
+.experience-details > div.active {
+    display: block; /* Show the active detail */
+} 
 
